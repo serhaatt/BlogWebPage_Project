@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin" %>
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Web Blog Admin Panel</title>
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="/AdminDosyalar/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Our Custom CSS -->
+    <link href="/AdminDosyalar/StyleSheet2.css" rel="stylesheet" />
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Admin Paneli</h3>
+            </div>
+
+            <ul class="list-unstyled">
+                <li>
+                    <a href="/Admin/Hakkımda/Hakkımda.aspx"><i class="glyphicon glyphicon-home"> Hakkımda</i></a>
+                </li>
+                <li>
+                    <a href="/Admin/Deneyimler/AdminDeneyimler.aspx"><i class="glyphicon glyphicon-briefcase"> Deneyimlerim</i></a>
+                </li>
+                <li>
+                    <a href="/Admin/Eğitimler/AdminEgitimler.aspx"><i class="glyphicon glyphicon-education"> Eğitim Hayatım</i></a>
+                </li>
+                <li>
+                    <a href="/Admin/Yetenekler/AdminYetenekler.aspx"><i class="glyphicon glyphicon-music"> Yeteneklerim</i></a>
+                </li>
+                <li>
+                    <a href="/Admin/Hobiler/AdminHobiler.aspx"><i class="glyphicon glyphicon-play"> Hobilerim</i></a>
+                </li>
+                <li>
+                    <a href="/Admin/Sertifikalar/"><i class="glyphicon glyphicon-certificate"> Sertifikalarım</i></a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="AdminDosyalar/jquery-1.12.0.min.js"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="AdminDosyalar/js-bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
